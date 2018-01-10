@@ -1,5 +1,5 @@
 // Initialize Lightning Charge client
-const charge = require('lightning-charge-client')(process.env.CHARGE_URL, process.env.CHARGE_TOKEN)
+const charge = require('lightning-charge-client')(process.env.CHARGE_URL || 'http://localhost:9112', process.env.CHARGE_TOKEN)
 
 // Express setup & settings
 const app = require('express')()
