@@ -4,8 +4,6 @@ A simple web server for accepting lightning donations, built on top of
 [Lightning Charge](https://github.com/ElementsProject/lightning-charge)
 and [c-lightning](https://github.com/ElementsProject/lightning).
 
-![Bakshish screenshot](https://i.imgur.com/pTeAush.png)
-
 ## Setup
 
 ```bash
