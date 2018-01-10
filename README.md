@@ -25,7 +25,7 @@ $ bakshishd --help
   Lightning Tip Box
 
   Usage
-    $ bakshish [options]
+    $ bakshishd [options]
 
   Options
     -c, --charge-url <url>        lightning charge server url [default: http://localhost:9112]
@@ -42,7 +42,7 @@ $ bakshishd --help
     -v, --version                 output version number
 
   Example
-    $ bakshish -c http://localhost:9112 -t chargeSecretToken
+    $ bakshishd -c http://localhost:9112 -t chargeSecretToken
 ```
 
 ## License (MIT)
