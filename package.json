@@ -1,0 +1,35 @@
+{
+  "name": "bakshish",
+  "version": "0.0.1",
+  "description": "Lightning Tip Box",
+  "bin": {
+    "bakshishd": "bakshishd",
+    "bakshish": "bakshishd"
+  },
+  "scripts": {
+    "start": "./bakshishd"
+  },
+  "repository": "https://github.com/shesek/bakshish.git",
+  "keywords": [
+    "bitcoin",
+    "lightning",
+    "tipjar",
+    "tip",
+    "donation",
+    "gratuity",
+    "bakshish"
+  ],
+  "author": "Nadav Ivgi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootswatch": "^4.0.0-beta.3",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "express": "^4.16.2",
+    "lightning-charge-client": "^0.1.4",
+    "meow": "^4.0.0",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}
