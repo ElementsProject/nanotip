@@ -11,7 +11,7 @@ app.set('trust proxy', process.env.PROXIED || 'loopback')
 
 app.use(require('cookie-parser')())
 app.use(require('body-parser').json())
-app.use(require('body-parser').urlencoded({ extended: false }))
+app.use(require('body-parser').urlencoded({ extended: true }))
 
 const webhookToken = require('crypto').createHmac('sha256', process.env.CHARGE_TOKEN).update('bakshish-webhook').digest('hex')
     , thankyouUrl  = process.env.THANKYOU_URL || app.settings.url + '/?thankyou'
@@ -39,7 +39,7 @@ app.post('/', (req, res, next) =>
   , currency: req.body.currency
   , expiry: 60000 // 1000 minutes or ~17 hours
   , webhook: app.settings.url + '/webhook/' + webhookToken
-  , metadata: { checkout: { redirect_url: thankyouUrl } }
+  , metadata: { checkout: { redirect_url: thankyouUrl }, info: req.body.info }
   })
   // Redirect to Lightning Charge's checkout page
   .then(inv => res.redirect(302, chargePubUrl + '/checkout/' + inv.id))

@@ -23,6 +23,10 @@ html.h-100
               for currency in [ 'BTC', 'USD', 'EUR', 'GBP', 'CNY', 'JPY', 'ILS' ]
                 option= currency
 
+        textarea.form-control.form-control-lg.mt-3(name='info[notes]', placeholder='Anything to add? (optional)')
+
+        //- you can add additional `info[...]` fields, they will automatically be saved with the invoice.
+
         button.btn.btn-lg.btn-primary.mt-4(type='submit') Send tip
 
     .fixed-bottom.text-right.pb-2.pr-2.text-info powered by #[a(href='https://github.com/shesek/bakshish') bakshish]
