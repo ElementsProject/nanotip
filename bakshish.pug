@@ -15,11 +15,10 @@ html.h-100
         .alert.alert-success.mb-4: h4.m-0 Thank you for your donation!
 
       form(method='post')
-        .form-row.justify-content-center
-          input(type='hidden', name='_csrf', value=req.csrfToken())
-          .col-auto
-            input.form-control.form-control-lg(name='amount', type='number', placeholder='Tip amount', step='0.00000000001', style='width:10em', autofocus)
-          .col-auto
+        input(type='hidden', name='_csrf', value=req.csrfToken())
+        .input-group.justify-content-center
+          input.form-control.form-control-lg(name='amount', type='number', placeholder='Tip amount', step='0.00000000001', style='width:10em', autofocus)
+          .input-group-append
             select.form-control.form-control-lg(name='currency')
               for currency in [ 'BTC', 'USD', 'EUR', 'GBP', 'CNY', 'JPY', 'ILS' ]
                 option= currency
