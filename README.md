@@ -32,7 +32,7 @@ $ bakshishd --help
     -t, --charge-token <token>    lightning charge access token [required]
     -m, --theme <name>            pick theme from bootswatch.com [default: yeti]
     -l, --title <name>            website title [default: Lightning Tip Box]
-    -p, --port <port>             http server port [default: 9112]
+    -p, --port <port>             http server port [default: 9115]
     -i, --host <host>             http server listen address [default: 127.0.0.1]
     -u, --url <url>               http server public url (used for webhooks) [default: http://{host}:{port}]
     -T, --thankyou-url <url>      url to send users to after completing the payment [default: {url}/thankyou]
