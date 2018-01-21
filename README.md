@@ -45,6 +45,10 @@ $ bakshishd --help
     $ bakshishd -c http://localhost:9112 -t chargeSecretToken
 ```
 
+## Screenshot
+
+<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="Bakshish screenshot">
+
 ## License
 
 MIT
