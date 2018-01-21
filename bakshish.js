@@ -37,6 +37,7 @@ app.post('/', (req, res, next) =>
   charge.invoice({
     amount: req.body.amount
   , currency: req.body.currency
+  , description: app.settings.title
   , expiry: 60000 // 1000 minutes or ~17 hours
   , webhook: app.settings.url + '/webhook/' + webhookToken
   , metadata: { checkout: { redirect_url: thankyouUrl }, info: req.body.info }
