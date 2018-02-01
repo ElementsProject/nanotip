@@ -30,13 +30,13 @@ $ bakshishd --help
   Options
     -c, --charge-url <url>        lightning charge server url [default: http://localhost:9112]
     -t, --charge-token <token>    lightning charge access token [required]
+    -P, --charge-public-url <url> url where charge is publicly accessible [default: {charge-url}]
     -m, --theme <name>            pick theme from bootswatch.com [default: yeti]
     -l, --title <name>            website title [default: Lightning Tip Box]
     -p, --port <port>             http server port [default: 9115]
     -i, --host <host>             http server listen address [default: 127.0.0.1]
     -u, --url <url>               http server public url (used for webhooks) [default: http://{host}:{port}]
     -T, --thankyou-url <url>      url to send users to after completing the payment [default: {url}/thankyou]
-    -P, --charge-public-url <url> url where charged is publicly accessible [default: {charge-url}]
     -e, --node-env <env>          nodejs environment mode [default: production]
     -h, --help                    output usage information
     -v, --version                 output version number

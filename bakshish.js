@@ -1,5 +1,5 @@
 // Initialize Lightning Charge client
-const charge = require('lightning-charge-client')(process.env.CHARGE_URL || 'http://localhost:9112', process.env.CHARGE_TOKEN)
+const charge = require('lightning-charge-client')(process.env.CHARGE_URL, process.env.CHARGE_TOKEN)
 
 // Express setup & settings
 const app = require('express')()
@@ -15,7 +15,7 @@ app.use(require('body-parser').urlencoded({ extended: true }))
 
 const webhookToken = require('crypto').createHmac('sha256', process.env.CHARGE_TOKEN).update('bakshish-webhook').digest('hex')
     , thankyouUrl  = process.env.THANKYOU_URL || app.settings.url + '/?thankyou'
-    , chargePubUrl = process.env.CHARGE_PUBLIC_URL || process.env.CHARGE_URL
+    , chargePubUrl = (process.env.CHARGE_PUBLIC_URL || process.env.CHARGE_URL).replace(/\/+$/, '')
     , cssPath      = __dirname + '/node_modules/bootswatch/dist/' + (process.env.THEME || 'yeti') + '/bootstrap.min.css'
 
 // Incoming webhook payment notifications
