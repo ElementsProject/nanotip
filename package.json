@@ -1,23 +1,24 @@
 {
-  "name": "bakshish",
+  "name": "nanotip",
   "version": "0.0.2",
   "description": "Lightning Tip Box",
   "bin": {
-    "bakshishd": "bakshishd",
-    "bakshish": "bakshishd"
+    "nanotipd": "nanotipd",
+    "nanotip": "nanotipd"
   },
   "scripts": {
-    "start": "./bakshishd"
+    "start": "./nanotipd"
   },
-  "repository": "https://github.com/shesek/bakshish.git",
+  "repository": "https://github.com/shesek/nanotip.git",
   "keywords": [
     "bitcoin",
     "lightning",
-    "tipjar",
+    "lightning-charge",
     "tip",
+    "tipjar",
     "donation",
     "gratuity",
-    "bakshish"
+    "nanotip"
   ],
   "author": "Nadav Ivgi",
   "license": "MIT",

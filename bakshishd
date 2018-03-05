@@ -2,7 +2,7 @@
 
 const args = require('meow')(`
     Usage
-      $ bakshishd [options]
+      $ nanotipd [options]
 
     Options
       -c, --charge-url <url>        lightning charge server url [default: http://localhost:9112]
@@ -19,7 +19,7 @@ const args = require('meow')(`
       -v, --version                 output version number
 
     Example
-      $ bakshishd -c http://localhost:9112 -t chargeSecretToken
+      $ nanotipd -c http://localhost:9112 -t chargeSecretToken
 
 `, { flags: { 'charge-url': {alias:'c', default: 'http://localhost:9112'}, 'charge-token': {alias:'t'}, 'charge-public-url': {alias:'P'}
             , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, 'thankyou-url': {alias:'T'}
@@ -31,4 +31,4 @@ Object.keys(args).filter(k => k.length > 1)
 
 process.env.CHARGE_TOKEN || (console.error('--charge-token is required'), process.exit(1))
 
-require('./bakshish')
+require('./nanotip')

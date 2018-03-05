@@ -1,4 +1,4 @@
-# Bakshish
+# nanotip
 
 A simple web server for accepting lightning donations, built on top of
 [Lightning Charge](https://github.com/ElementsProject/lightning-charge)
@@ -7,11 +7,11 @@ and [c-lightning](https://github.com/ElementsProject/lightning).
 ## Setup
 
 ```bash
-$ npm install -g bakshish lightning-charge
+$ npm install -g nanotip lightning-charge
 
 $ charged --api-token mySecretToken # defaults: --ln-path ~/.lightning --db-path ./charge.db --port 9112
 
-$ bakshishd --charge-token mySecretToken # defaults: --charge-url http://localhost:9112 --port 9115
+$ nanotipd --charge-token mySecretToken # defaults: --charge-url http://localhost:9112 --port 9115
 ```
 
 See [Lightning Charge](https://github.com/ElementsProject/lightning-charge) for help setting up
@@ -20,12 +20,12 @@ See [Lightning Charge](https://github.com/ElementsProject/lightning-charge) for 
 ## Use
 
 ```bash
-$ bakshishd --help
+$ nanotipd --help
 
   Lightning Tip Box
 
   Usage
-    $ bakshishd [options]
+    $ nanotipd [options]
 
   Options
     -c, --charge-url <url>        lightning charge server url [default: http://localhost:9112]
@@ -42,7 +42,7 @@ $ bakshishd --help
     -v, --version                 output version number
 
   Example
-    $ bakshishd -c http://localhost:9112 -t chargeSecretToken
+    $ nanotipd -c http://localhost:9112 -t chargeSecretToken
 ```
 
 ## Screenshot

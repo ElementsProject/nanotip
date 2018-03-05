@@ -13,7 +13,7 @@ app.use(require('cookie-parser')())
 app.use(require('body-parser').json())
 app.use(require('body-parser').urlencoded({ extended: true }))
 
-const webhookToken = require('crypto').createHmac('sha256', process.env.CHARGE_TOKEN).update('bakshish-webhook').digest('hex')
+const webhookToken = require('crypto').createHmac('sha256', process.env.CHARGE_TOKEN).update('nanotip-webhook').digest('hex')
     , thankyouUrl  = process.env.THANKYOU_URL || app.settings.url + '/?thankyou'
     , chargePubUrl = (process.env.CHARGE_PUBLIC_URL || process.env.CHARGE_URL).replace(/\/+$/, '')
     , cssPath      = __dirname + '/node_modules/bootswatch/dist/' + (process.env.THEME || 'yeti') + '/bootstrap.min.css'
@@ -28,7 +28,7 @@ app.use(require('morgan')('dev'))
 app.use(require('csurf')({ cookie: true }))
 
 // Frontend
-app.get('/', (req, res) => res.render(__dirname + '/bakshish.pug', { req }))
+app.get('/', (req, res) => res.render(__dirname + '/nanotip.pug', { req }))
 app.get('/bootstrap.min.css', (req, res) => res.sendFile(cssPath))
 
 // Tip request
