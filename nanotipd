@@ -21,9 +21,9 @@ const args = require('meow')(`
     Example
       $ nanotipd -c http://localhost:9112 -t chargeSecretToken
 
-`, { flags: { 'charge-url': {alias:'c', default: 'http://localhost:9112'}, 'charge-token': {alias:'t'}, 'charge-public-url': {alias:'P'}
-            , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, 'thankyou-url': {alias:'T'}
-            , port: {alias:'p'}, host: {alias:'i'}, 'node-env' : {alias:'e', default:'production'} } }
+`, { flags: { chargeUrl: {alias:'c'}, chargeToken: {alias:'t'}, chargePublicUrl: {alias:'P'}
+            , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, thankyouUrl: {alias:'T'}
+            , port: {alias:'p'}, host: {alias:'i'}, nodeEnv: {alias:'e'} } }
 ).flags
 
 Object.keys(args).filter(k => k.length > 1)
