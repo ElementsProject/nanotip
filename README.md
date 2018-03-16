@@ -1,5 +1,8 @@
 # nanotip
 
+[![npm release](https://img.shields.io/npm/v/nanotip.svg)](https://www.npmjs.com/package/nanotip)
+[![MIT license](https://img.shields.io/github/license/shesek/nanotip.svg)](https://github.com/shesek/nanotip/blob/master/LICENSE)
+
 A simple web server for accepting lightning donations, built on top of
 [Lightning Charge](https://github.com/ElementsProject/lightning-charge)
 and [c-lightning](https://github.com/ElementsProject/lightning).
