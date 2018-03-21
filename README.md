@@ -7,6 +7,8 @@ A simple web server for accepting lightning donations, built on top of
 [Lightning Charge](https://github.com/ElementsProject/lightning-charge)
 and [c-lightning](https://github.com/ElementsProject/lightning).
 
+`nanotipd` generates Lightning invoices on the fly using your Lightning Charge server, allowing users to maintain a static tip jar on their web site that connects to the dynamic Lightning Network.
+
 ## Setup
 
 ```bash
@@ -50,7 +52,7 @@ $ nanotipd --help
 
 ## Screenshot
 
-<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="Bakshish screenshot">
+<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="nanotip screenshot">
 
 ## License
 
