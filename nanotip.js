@@ -39,7 +39,6 @@ app.post('/', (req, res, next) =>
     amount: req.body.amount
   , currency: req.body.currency
   , description: app.settings.title
-  , expiry: 60000 // 1000 minutes or ~17 hours
   , webhook: app.settings.url + '/webhook/' + webhookToken
   , metadata: { source: 'nanotip', checkout: { redirect_url: thankyouUrl }, info: req.body.info }
   })
@@ -49,4 +48,4 @@ app.post('/', (req, res, next) =>
 )
 
 app.listen(app.settings.port, app.settings.host, _ =>
-  console.log(`HTTP server running on ${ app.settings.host }:${ app.settings.port }`))
+  console.log(`nanotipd running on http://${ app.settings.host }:${ app.settings.port }`))
