@@ -1,11 +1,14 @@
 # nanotip
 
 [![npm release](https://img.shields.io/npm/v/nanotip.svg)](https://www.npmjs.com/package/nanotip)
-[![MIT license](https://img.shields.io/github/license/shesek/nanotip.svg)](https://github.com/shesek/nanotip/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/github/license/elementsproject/nanotip.svg)](https://github.com/elementsproject/nanotip/blob/master/LICENSE)
 
-A simple web server for accepting lightning donations, built on top of
-[Lightning Charge](https://github.com/ElementsProject/lightning-charge)
-and [c-lightning](https://github.com/ElementsProject/lightning).
+A simple web server for accepting lightning donations.
+
+`nanotip` generates Lightning invoices on the fly using your Lightning Charge server,
+allowing users to setup a tip jar that accepts Lightning Network payments.
+
+Powered by :zap: [Lightning Charge](https://github.com/ElementsProject/lightning-charge).
 
 ## Setup
 
@@ -50,7 +53,7 @@ $ nanotipd --help
 
 ## Screenshot
 
-<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="Bakshish screenshot">
+<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="nanotip screenshot">
 
 ## License
 
