@@ -9,7 +9,7 @@
   "scripts": {
     "start": "./nanotipd"
   },
-  "repository": "https://github.com/shesek/nanotip.git",
+  "repository": "https://github.com/ElementsProject/nanotip.git",
   "keywords": [
     "bitcoin",
     "lightning",
