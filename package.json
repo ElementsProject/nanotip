@@ -24,13 +24,13 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "bootswatch": "^4.0.0-beta.3",
+    "bootswatch": "^4.0.0",
     "cookie-parser": "^1.4.3",
     "csurf": "^1.9.0",
-    "express": "^4.16.2",
-    "lightning-charge-client": "^0.1.4",
+    "express": "^4.16.3",
+    "lightning-charge-client": "^0.1.7",
     "meow": "^4.0.0",
     "morgan": "^1.9.0",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.3"
   }
 }
