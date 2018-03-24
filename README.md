@@ -2,6 +2,8 @@
 
 [![npm release](https://img.shields.io/npm/v/nanotip.svg)](https://www.npmjs.com/package/nanotip)
 [![MIT license](https://img.shields.io/github/license/elementsproject/nanotip.svg)](https://github.com/elementsproject/nanotip/blob/master/LICENSE)
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![IRC](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://webchat.freenode.net/?channels=lightning-charge)
 
 A simple web server for accepting lightning donations.
 
