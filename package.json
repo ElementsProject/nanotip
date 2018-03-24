@@ -1,6 +1,6 @@
 {
   "name": "nanotip",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Lightning Tip Box",
   "bin": {
     "nanotipd": "nanotipd",
