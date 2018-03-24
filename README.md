@@ -10,6 +10,8 @@ allowing users to setup a tip jar that accepts Lightning Network payments.
 
 Powered by :zap: [Lightning Charge](https://github.com/ElementsProject/lightning-charge).
 
+![nanotip demo](https://i.imgur.com/WLoiRT2.gif)
+
 ## Setup
 
 ```bash
@@ -50,10 +52,6 @@ $ nanotipd --help
   Example
     $ nanotipd -c http://localhost:9112 -t chargeSecretToken
 ```
-
-## Screenshot
-
-<img src="https://i.imgur.com/9pc0h8G.png" width="400px" alt="nanotip screenshot">
 
 ## License
 
