@@ -17,7 +17,8 @@ html.h-100
       form(method='post')
         input(type='hidden', name='_csrf', value=req.csrfToken())
         .input-group.justify-content-center
-          input.form-control.form-control-lg(name='amount', type='number', placeholder='Tip amount', step='0.00000000001', style='width:10em', autofocus)
+          input.form-control.form-control-lg(name='amount', type='number', placeholder='Tip amount', step='0.00000000001',
+                                             style='width:10em', autofocus, autocomplete='off', required)
           .input-group-append
             select.form-control.form-control-lg(name='currency')
               for currency in [ 'BTC', 'USD', 'EUR', 'GBP', 'CNY', 'JPY', 'ILS' ]
