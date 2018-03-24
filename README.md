@@ -16,18 +16,22 @@ Powered by :zap: [Lightning Charge](https://github.com/ElementsProject/lightning
 
 ## Setup
 
+Setup Lightning Charge, then:
+
 ```bash
-$ npm install -g nanotip lightning-charge
-
-$ charged --api-token mySecretToken # defaults: --ln-path ~/.lightning --db-path ./charge.db --port 9112
-
+$ npm install -g nanotip
 $ nanotipd --charge-token mySecretToken # defaults: --charge-url http://localhost:9112 --port 9115
+nanotipd running on http://localhost:9115
 ```
 
-See [Lightning Charge](https://github.com/ElementsProject/lightning-charge) for help setting up
+See [Lightning Charge](https://github.com/ElementsProject/lightning-charge) for more help setting up
 `bitcoind`, `lightningd` and `charged`.
 
-## Use
+Note that `nanotip` uses Lightning Charge's built-in checkout page, meaning that the Lightning Charge
+server has to be publicly accessible to users. If users need to access it using a different URL
+than the one used for communicating with the API, set `--charge-public-url`.
+
+## CLI options
 
 ```bash
 $ nanotipd --help
