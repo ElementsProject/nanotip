@@ -23,7 +23,7 @@ const args = require('meow')(`
 
 `, { flags: { chargeUrl: {alias:'c', default: 'http://localhost:9112'}, chargeToken: {alias:'t'}, chargePublicUrl: {alias:'P'}
             , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, thankyouUrl: {alias:'T'}
-            , port: {alias:'p'}, host: {alias:'i'}, nodeEnv: {alias:'e'} } }
+            , port: {alias:'p'}, host: {alias:'i'}, nodeEnv: {alias:'e', default:'production'} } }
 ).flags
 
 Object.keys(args).filter(k => k.length > 1)

@@ -3,7 +3,6 @@ const charge = require('lightning-charge-client')(process.env.CHARGE_URL, proces
 
 // Express setup & settings
 const app = require('express')()
-app.set('env', process.env.NODE_ENV || 'production')
 app.set('port', process.env.PORT || 9115)
 app.set('host', process.env.HOST || 'localhost')
 app.set('url', process.env.URL || `http://${app.settings.host}:${app.settings.port}`)
