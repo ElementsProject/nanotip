@@ -38,6 +38,7 @@ app.post('/', (req, res, next) =>
     amount: req.body.amount
   , currency: req.body.currency
   , description: app.settings.title
+  , expiry: process.env.INVOICE_EXPIRY
   , webhook: app.settings.url + '/webhook/' + webhookToken
   , metadata: { source: 'nanotip', checkout: { redirect_url: thankyouUrl }, info: req.body.info }
   })
