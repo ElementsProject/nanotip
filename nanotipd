@@ -15,6 +15,7 @@ const args = require('meow')(`
       -u, --url <url>               http server public url (used for webhooks) [default: http://{host}:{port}]
       -T, --thankyou-url <url>      url to send users to after completing the payment [default: {url}/thankyou]
       -e, --node-env <env>          nodejs environment mode [default: production]
+      -X, --expiry <sec>            invoice expiry time [default: 3600 seconds]
       -h, --help                    output usage information
       -v, --version                 output version number
 
@@ -22,13 +23,12 @@ const args = require('meow')(`
       $ nanotipd -c http://localhost:9112 -t chargeSecretToken
 
 `, { flags: { chargeUrl: {alias:'c', default: 'http://localhost:9112'}, chargeToken: {alias:'t'}, chargePublicUrl: {alias:'P'}
-            , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, thankyouUrl: {alias:'T'}
-            , port: {alias:'p'}, host: {alias:'i'}, nodeEnv: {alias:'e', default:'production'} } }
+        , theme: {alias:'m'}, title: {alias:'l'}, url: {alias:'u'}, thankyouUrl: {alias:'T'}
+        , port: {alias:'p'}, host: {alias:'i'}, nodeEnv: {alias:'e', default:'production'}, invoiceExpiry: {alias: 'X', default: "3600" } } }
 ).flags
 
 Object.keys(args).filter(k => k.length > 1)
-  .forEach(k => process.env[k.replace(/([A-Z])/g, '_$1').toUpperCase()] = args[k])
+    .forEach(k => process.env[k.replace(/([A-Z])/g, '_$1').toUpperCase()] = args[k])
 
 process.env.CHARGE_TOKEN || (console.error('--charge-token is required'), process.exit(1))
-
 require('./nanotip')
